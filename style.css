@@ -1,169 +1,289 @@
-
-body{
-    width: 700px;
-}
-
-
-header{
-    background-image: url("09.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100%;
-    height: 500px;
-    position: relative;
-     
-}
-
-
-
-.middlepart h1 ,
-.middlepart .first h4{
-    text-align: center;
-}
-
-
-.middlepart .second{
-    position: relative;
-    left: 40px;
-    top: 70px;
-}
-
-.middlepart .third{
-    position: relative;
-    left: 37%;
-    bottom: 195px;
-}
-
-.middlepart .fourth{
-    position: relative;
-    left: 71%;
-    bottom: 460px;
-    
-}
-
-.aftermiddle{
-    background-color: #F6F6F6;
-    height: 400px;
-}
-
-.aftermiddleimage img{
-  width: 800px;
-  height:auto;
-  position: relative;
-  bottom: 200px;
-}
-
-.footer{
-    display: flex;
-    align-items: center;
-}
-.aftermiddletext{
-    position: relative;
-    left: 60%;
-    bottom: 600px;
-}
-
-.aftermiddleimage1 img{
-    width: 800px;
-    height: auto;
-    position: relative;
-    bottom: 200px;
-    left : 50%;
-
-}
-.iconandlinks {
-    display: flex;
-    align-items: center;
-}
-
-.nav-links{
-    display: flex;
-    list-style: none;
+body {
+    font-family: "Open Sans", sans-serif;
     margin: 0;
     padding: 0;
 }
 
-.nav-links a {
-    text-decoration: none;
-    color: white;
-    /* Adjust the color as needed */
-    margin: 0 10px;
-    font-weight: bold;
-    font-family: "Open Sans", sans-serif;
-    /* Adjust the spacing between links as needed */
+header {
+    background-image: url("09.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 500px;
+    position: relative;
+}
+
+.icon-and-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.logo-image {
+    width: 50px;
+    height: auto;
+    position: absolute;
+    top: 10px;
+    left: 60px;
 }
 
 .nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
     position: absolute;
     top: 10px;
     right: 10px;
 }
 
-.logo-image{
-    width: 50px;
-    height:auto;
-    position: absolute;
-    top: 10px;
-    left:60px;
-}
-
-.image-and-cto{
+.nav-links a {
+    text-decoration: none;
     color: white;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.cta {
+    position: absolute;
+    color: white;
+    bottom: 180px;
+    z-index: 2;
+    left: 60px;
+}
+
+/*Continuing form here note that elements inherit styles based on the order of the css values last added */
+.button-header {
+    margin-top: 20px;
+    margin-left: 300px;
+    color: white;
+    border: none;
+    height: 40px;
+    width: 120px;
+    cursor: pointer;
+    background-color: #4B05DF;
+
+}
+
+.middle-part {
+    padding: 50px 0;
+    text-align: center;
+
+}
+
+.first {
+    text-align: center;
+    margin-left: 60px;
 }
 
 
-.header-text{
-    font-family: "Open Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-    font-variation-settings:
-        "wdth" 100;
-    
-    
+.middlepartimages {
+    display: flex;
+    flex-wrap: wrap;
+    /* items will wrap onto new lines if they do not fit in the container */
+    justify-content: flex-start;
+    /* items are aligned to the start of the container */
 }
 
-img {
+
+.middlepartimages .item {
+    flex: 0 1 20%;
+    /* each item will take up 30% of the container's width */
     max-width: 100%;
-    height: auto;
+    /* items will not exceed the container's width */
+    margin-right: 10px;
+    /* add some space between items */
+    margin-bottom: 10px;
+    /* add some space between rows of items */
+    margin-top: 7em;
+
+    text-align: center;
+
 }
 
-@media screen and (max-width: 768px) {
-    header{
-        padding: 40px;
-        
+.item img {
+    width: 70px;
+}
+
+.middlepartimages>.item {
+    margin-left: 150px;
+}
+
+
+
+.aftermiddle {
+    margin-top: 3em;
+    background-color: #F6F6F6;
+    padding: 280px 0 280px 0;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+
+
+
+.aftermiddlefirst img {
+    width: 50%;
+    margin-bottom: 40em;
+}
+
+.aftermiddlesecond img {
+    width: 50%;
+    margin-left: 800px;
+    margin-top: 300px;
+
+}
+
+.aftermiddletext1 {
+    margin-left: 900px;
+    margin-top: -1000px;
+    font-size: 15px;
+
+}
+
+.aftermiddlesecond .aftermiddletext2 {
+    margin-top: -400px;
+    font-size: 16px;
+    margin-left: 60px;
+}
+
+.aftermiddletext button {
+    width: 80px;
+    height: 50px;
+}
+
+/* Media query for screens less than 600px */
+@media only screen and (max-width: 600px) {
+
+    .aftermiddlefirst,
+    .aftermiddlesecond {
+        width: 100%;
+        /* Set the width to 100% so that they take up the full width of the parent container */
+        max-width: none;
+        /* Remove the max-width on smaller screens */
     }
 
+    .aftermiddlefirst img,
+    .aftermiddlesecond img {
+        width: 100%;
+        /* Set the width to 100% so that the images take up the full width of their parent container */
+        margin-bottom: 20px;
+        /* Decrease the margin-bottom */
+    }
+
+    .aftermiddlesecond img {
+        margin-top: 0;
+        /* Remove the margin-top */
+    }
+
+    .aftermiddletext1 {
+        margin-top: 0;
+        /* Remove the margin-top */
+    }
+
+
+}
+
+.footer {
+    background-color: #646060;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.rating {
+    mix-blend-mode: multiply;
+}
+
+.footer .testimonial {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer .testimonial img {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+.footer .testimonial-text {
+    flex: 1;
+    text-align: left;
+}
+
+@media screen and (max-width: 600px) {
     .logo-image {
         width: 30px;
-        
     }
 
     .nav-links {
         top: 5px;
         right: 5px;
-      
     }
-
 }
 
-.image-and-cto {
-    position: relative;
-    text-align: left;
-    margin-top: 180px;
-    margin-left: 59px
-}
-
-.button-header{
+.button-header {
     position: absolute;
     bottom: 140px;
-    margin-left: 59px;
+    margin-left: 60px;
+    margin-right: auto;
     color: white;
     border: none;
-    height:40px;
+    height: 40px;
     width: 120px;
     cursor: pointer;
     background-color: #4B05DF;
+}
+
+.middle-part h1,
+.middle-part h4 {
+    text-align: center;
+}
+
+
+
+.button {
+    color: white;
+    border: none;
+    height: 40px;
+    width: 120px;
+    cursor: pointer;
+    background-color: #4B05DF;
+    margin-top: 20px;
+}
+
+.footer .testimonial {
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer .testimonial img {
+    margin-right: 0;
+    margin-bottom: 10px;
+}
+
+
+@media screen and (max-width:1000px) {
+    .nav-links {
+        top: 5px;
+        right: 5px;
+    }
+
+    .button-header {
+        bottom: 100px;
+    }
+
+
+    .middlepartimages .item {
+        flex: 0 1 100%;
+        max-width: none;
+
+    }
+
+
 
 }
